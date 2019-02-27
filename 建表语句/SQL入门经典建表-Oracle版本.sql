@@ -1,4 +1,4 @@
---SQL入门经典(第五版)
+--SQL入门经典(第五版)--
 -- X-Dragon 版权所有 cnxielong@gmail.com
 -- 建表语句跟MYSQL基本一致 以下是ORacle建表语句
 CREATE TABLE EMPLOYEE_TBL

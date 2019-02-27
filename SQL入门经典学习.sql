@@ -1,11 +1,11 @@
 --2019-2-26 学习--
 
---原先的表--
+--cha xun--
 SELECT *  FROM PRODUCTS_TBL ;
 
---新生成的表--
+--?????傻谋?--
 CREATE TABLE products_tbl_test AS SELECT *  FROM products_tbl ;
--- 新生成的表跟原表一模一样--
+-- ?????傻谋???原??一模一??--
 SELECT * FROM products_tbl_test;
 
 drop table products_tbl_test;
