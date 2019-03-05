@@ -58,6 +58,14 @@ CREATE TABLE EMPLOYEE_TBL_UNIQUE
   
   -- 删除约束
   ALTER TABLE employee_check_tst DROP CONSTRAINT CHE_EMP_ZIP;
+ 
+--- 第三章课后练习-----------------  
+-- 查看当前数据库的编码集  结果是SIMPLIFIED CHINESE_CHINA.AL32UTF8
+  SELECT USERENV('language') FROM DUAL;
+--查询当前所有的表格 
+  SELECT * FROM CAT;
+--描述当前表的结构 
+  DESCRIBE EMPLOYEE_PAY_TBL;
   
   
   
@@ -67,7 +75,4 @@ CREATE TABLE EMPLOYEE_TBL_UNIQUE
   
   
   
-  
-  
-  
-  
+
