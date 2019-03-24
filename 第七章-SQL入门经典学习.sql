@@ -1,16 +1,28 @@
---2019-3-24 Sqlå…¥é—¨ç»å…¸ç¬¬ä¸ƒç« 
---æŸ¥è¯¢è¡¨æ‰€æœ‰çš„å­—æ®µ
+--2019-3-24 SqlÈëÃÅ¾­µäµÚÆßÕÂ
+--²éÑ¯±íËùÓÐµÄ×Ö¶Î
 SELECT * FROM PRODUCTS_TBL;
 select CUST_NAME  from customer_tbl;
 
---åŠ ä¸ŠWHERE é™å®šæ¡ä»¶
+--¼ÓÉÏWHERE ÏÞ¶¨Ìõ¼þ
 SELECT * FROM PRODUCTS_TBL where cost<5;
 
---åŠ ä¸ŠWHERE é™å®šæ¡ä»¶ orderæŽ’åº é»˜è®¤å‡åº
+--¼ÓÉÏWHERE ÏÞ¶¨Ìõ¼þ orderÅÅÐò Ä¬ÈÏÉýÐò
 SELECT * FROM PRODUCTS_TBL WHERE COST<400 ORDER BY COST ;
 
---åŠ ä¸ŠWHERE é™å®šæ¡ä»¶ orderæŽ’åº descé™åº
+--¼ÓÉÏWHERE ÏÞ¶¨Ìõ¼þ orderÅÅÐò desc½µÐò
 SELECT * FROM PRODUCTS_TBL WHERE COST<20 ORDER BY PROD_DESC DESC;
---SQLæ•°å­—è½¬æ¢æˆå­—ç¬¦  è¡¥å…¨æ ¼å¼æŽ’åº
+--SQLÊý×Ö×ª»»³É×Ö·û  ²¹È«¸ñÊ½ÅÅÐò
 SELECT ROWID, TO_CHAR(COST,'999990.000') ,SUBSTR( TO_CHAR(COST,'999990.000'),-4,2) FROM PRODUCTS_TBL ORDER BY SUBSTR( TO_CHAR(COST,'999990.000'),-2,2);
 select prod_id,cost,prod_id + cost from PRODUCTS_TBL;
+
+--1´ú±íµÚÒ»¸ö×Ö¶Î °´ÕÕprod_descÅÅÐò
+select prod_desc, prod_id,cost from products_tbl where cost < 200 order by 1;
+
+
+--- 7.3
+--7.3.1
+select count(*) from PRODUCTS_TBL;
+
+--¿ÎºóÌâ3
+SELECT PROD_DESC,COST FROM PRODUCTS_TBL ORDER BY 2 DESC;
+--SELECT prod_desc,to_char£¨COST,'999990.000'£©costnum FROM products_tbl ORDER BY costnum DESC;

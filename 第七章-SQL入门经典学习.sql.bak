@@ -1,0 +1,16 @@
+--2019-3-24 Sql入门经典第七章
+--查询表所有的字段
+SELECT * FROM PRODUCTS_TBL;
+select CUST_NAME  from customer_tbl;
+
+--加上WHERE 限定条件
+SELECT * FROM PRODUCTS_TBL where cost<5;
+
+--加上WHERE 限定条件 order排序 默认升序
+SELECT * FROM PRODUCTS_TBL WHERE COST<400 ORDER BY COST ;
+
+--加上WHERE 限定条件 order排序 desc降序
+SELECT * FROM PRODUCTS_TBL WHERE COST<20 ORDER BY PROD_DESC DESC;
+--SQL数字转换成字符  补全格式排序
+SELECT ROWID, TO_CHAR(COST,'999990.000') ,SUBSTR( TO_CHAR(COST,'999990.000'),-4,2) FROM PRODUCTS_TBL ORDER BY SUBSTR( TO_CHAR(COST,'999990.000'),-2,2);
+select prod_id,cost,prod_id + cost from PRODUCTS_TBL;
