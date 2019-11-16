@@ -20,4 +20,17 @@ WHERE ep.emp_id = e.emp_id
 AND ep.pay_rate >(SELECT pay_rate FROM employee_pay_tbl WHERE emp_id='442346889');
 commit;
 
-SELECT * FROM rich_employees;
+
+--查询某员工时薪
+SELECT PAY_RATE FROM EMPLOYEE_PAY_TBL 
+WHERE
+ EMP_ID='220984332';
+
+--查询大于某员工时薪的薪资信息
+SELECT e.*
+FROM employee_tbl e,
+  employee_pay_tbl ep
+WHERE e.emp_id  = ep.emp_id
+AND ep.pay_rate >
+  (SELECT PAY_RATE FROM EMPLOYEE_PAY_TBL WHERE EMP_ID='220984332'
+  );
