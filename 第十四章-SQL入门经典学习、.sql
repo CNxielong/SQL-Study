@@ -3,7 +3,7 @@
 SELECT salary FROM employee_pay_tbl WHERE emp_id='311549902';
 
 --select与子查询
-select ep.pay_rate,e.emp_id,e.last_name,e.first_name FROM employee_pay_tbl ep,employee_tbl e where ep.salary >（SELECT salary FROM employee_pay_tbl WHERE emp_id='311549902'） 
+select EP.PAY_RATE,E.EMP_ID,E.LAST_NAME,E.FIRST_NAME from EMPLOYEE_PAY_TBL EP,EMPLOYEE_TBL E where EP.SALARY >（SELECT SALARY from EMPLOYEE_PAY_TBL where EMP_ID='311549902'）; 
 
 --select 和insert语句
 
@@ -34,3 +34,8 @@ WHERE e.emp_id  = ep.emp_id
 AND ep.pay_rate >
   (SELECT PAY_RATE FROM EMPLOYEE_PAY_TBL WHERE EMP_ID='220984332'
   );
+  
+  --查询购物超过10件商品的顾客姓名
+  select * from ORDERS_TBL --CUSTOMER_TBL 
+
+  
